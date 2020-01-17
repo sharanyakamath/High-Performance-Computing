@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-void main()
+int main()
 {
  
     int i,j,n;
-    float A[40][40],x[40],b[40],e[40],zmax,emax;
+    float A[1001][1001],x[1001],b[1001],e[1001],zmax,emax;
     // b is the eigenvector
     n = 1000;
     for(i=1; i<=n; i++)
@@ -13,6 +13,7 @@ void main()
         for(j=1; j<=n; j++)
         {
             A[i][j] = (float)rand()/(float)RAND_MAX;
+	    A[i][j] = A[j][i];
         }
     }
     
@@ -57,10 +58,5 @@ void main()
         }
     }
     while(emax>0.001);
-    // printf("\n The required eigen value is %f",zmax);
-    // printf("\n\nThe required eigen vector is :\n");
-    // for(i=1; i<=n; i++)
-    // {
-    //     printf("%f\n",b[i]);
-    // }
+    printf("\n The required eigen value is %f",zmax);
 }
