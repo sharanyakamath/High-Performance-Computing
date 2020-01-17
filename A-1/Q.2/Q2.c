@@ -1,11 +1,14 @@
 #include<stdio.h>
 //#include<conio.h>
 #include<math.h>
+#include<stdlib.h>
+#include<time.h>
 int main()
 {
 
     int i,j,n;
     float A[1001][1001],x[1001],z[1001],e[1001],zmax,emax;
+    srand(time(0)); 
     printf("\nEnter the order of matrix:");
     scanf("%d",&n);
     //printf("\nEnter matrix elements row-wise\n");
@@ -15,7 +18,8 @@ int main()
         {
             //printf("A[%d][%d]=", i,j);
             //scanf("%f",&A[i][j]);
-	    A[i][j]=1;
+	    A[i][j]=rand()%100;
+	    A[j][i]=A[i][j];
         }
     }
     //printf("\nEnter the column vector\n");
@@ -23,7 +27,7 @@ int main()
     {
         //printf("X[%d]=",i);
         //scanf("%f",&x[i]);
-	x[i]=1;
+	x[i]=rand()%100;
     }
 
     do
