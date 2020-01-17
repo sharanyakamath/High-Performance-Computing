@@ -18,7 +18,7 @@ int main()
         {
             //printf("A[%d][%d]=", i,j);
             //scanf("%f",&A[i][j]);
-	    A[i][j]=rand()%100;
+	    A[i][j]=rand()%2;
 	    A[j][i]=A[i][j];
         }
     }
@@ -27,7 +27,7 @@ int main()
     {
         //printf("X[%d]=",i);
         //scanf("%f",&x[i]);
-	x[i]=rand()%100;
+	x[i]=rand()%2;
     }
 
     do
