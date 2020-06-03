@@ -13,7 +13,7 @@ int main()
         for(j=1; j<=n; j++)
         {
             A[i][j] = (float)rand()/(float)RAND_MAX;
-	    A[i][j] = A[j][i];
+	    A[j][i] = A[i][j];
         }
     }
     
